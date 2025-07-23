@@ -114,7 +114,7 @@ export const ProductCards = () => {
                 </div>
 
                 <button 
-                  onClick={() => window.open('https://checkout.stylewind.shop/r/xZ92SSzf39430F21M5y', '_blank')}
+                  onClick={() => window.open('https://checkout.lojastylewind.com/r/g53J3I0lRky942i8', '_blank')}
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-400 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"
                 >
                   <ShoppingCart className="w-5 h-5" />
