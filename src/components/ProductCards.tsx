@@ -10,7 +10,7 @@ const products = [
     price: 'R$ 89,90',
     originalPrice: 'R$ 149,90',
     features: ['Tecido premium', 'Balaclava removível', 'Bolso canguru'],
-    checkoutUrl: 'https://checkout.lojastylewind.com/r/moletom-classic'
+    checkoutUrl: 'https://checkout.lojastylewind.com/r/g53J3I0lRky942i8'
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const products = [
     originalPrice: 'R$ 149,90',
     features: ['Impermeável', 'Anti-vento', 'Respirável'],
     popular: true,
-    checkoutUrl: 'https://checkout.lojastylewind.com/r/moletom-pro'
+    checkoutUrl: 'https://checkout.lojastylewind.com/r/xZ92SSzf39430F21M5y'
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const products = [
     price: 'R$ 89,90',
     originalPrice: 'R$ 149,90',
     features: ['Design urbano', 'Corte moderno', 'Máximo conforto'],
-    checkoutUrl: 'https://checkout.lojastylewind.com/r/moletom-urban'
+    checkoutUrl: 'https://checkout.lojastylewind.com/r/3j5u095ozYS11ELS'
   }
 ];
 
