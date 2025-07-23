@@ -9,7 +9,8 @@ const products = [
     description: 'Moletom com balaclava integrada, perfeito para o dia a dia',
     price: 'R$ 89,90',
     originalPrice: 'R$ 149,90',
-    features: ['Tecido premium', 'Balaclava removível', 'Bolso canguru']
+    features: ['Tecido premium', 'Balaclava removível', 'Bolso canguru'],
+    checkoutUrl: 'https://checkout.lojastylewind.com/r/moletom-classic'
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const products = [
     price: 'R$ 89,90',
     originalPrice: 'R$ 149,90',
     features: ['Impermeável', 'Anti-vento', 'Respirável'],
-    popular: true
+    popular: true,
+    checkoutUrl: 'https://checkout.lojastylewind.com/r/moletom-pro'
   },
   {
     id: 3,
@@ -28,7 +30,8 @@ const products = [
     description: 'Design urbano moderno para quem busca estilo e funcionalidade',
     price: 'R$ 89,90',
     originalPrice: 'R$ 149,90',
-    features: ['Design urbano', 'Corte moderno', 'Máximo conforto']
+    features: ['Design urbano', 'Corte moderno', 'Máximo conforto'],
+    checkoutUrl: 'https://checkout.lojastylewind.com/r/moletom-urban'
   }
 ];
 
@@ -114,7 +117,7 @@ export const ProductCards = () => {
                 </div>
 
                 <button 
-                  onClick={() => window.open('https://checkout.lojastylewind.com/r/g53J3I0lRky942i8', '_blank')}
+                  onClick={() => window.open(product.checkoutUrl, '_blank')}
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-400 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"
                 >
                   <ShoppingCart className="w-5 h-5" />
