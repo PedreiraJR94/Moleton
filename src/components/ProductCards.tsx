@@ -10,7 +10,12 @@ const products = [
     price: 'R$ 89,90',
     originalPrice: 'R$ 149,90',
     features: ['Tecido premium', 'Balaclava removível', 'Bolso canguru'],
-    checkoutUrl: 'https://checkout.lojastylewind.com/r/g53J3I0lRky942i8'
+    variants: {
+      P: 'https://checkout.lojastylewind.com/r/7B1ZY191620U0tvrg7',
+      M: 'https://checkout.lojastylewind.com/r/P1p97yYoMb0E317n',
+      G: 'https://checkout.lojastylewind.com/r/7N8101EjC7QH4W9D',
+      GG: 'https://checkout.lojastylewind.com/r/wnqjZ1mDX1745970'
+    }
   },
   {
     id: 2,
@@ -21,7 +26,12 @@ const products = [
     originalPrice: 'R$ 149,90',
     features: ['Impermeável', 'Anti-vento', 'Respirável'],
     popular: true,
-    checkoutUrl: 'https://checkout.lojastylewind.com/r/xZ92SSzf39430F21M5y'
+    variants: {
+      P: 'https://checkout.lojastylewind.com/r/69ZG2p6i39T51I9',
+      M: 'https://checkout.lojastylewind.com/r/j4cU9DOct1w97jI926',
+      G: 'https://checkout.lojastylewind.com/r/mHx997V9q2mphk615iW',
+      GG: 'https://checkout.lojastylewind.com/r/6690gDrvx8129x49'
+    }
   },
   {
     id: 3,
@@ -31,7 +41,12 @@ const products = [
     price: 'R$ 89,90',
     originalPrice: 'R$ 149,90',
     features: ['Design urbano', 'Corte moderno', 'Máximo conforto'],
-    checkoutUrl: 'https://checkout.lojastylewind.com/r/3j5u095ozYS11ELS'
+    variants: {
+      P: 'https://checkout.lojastylewind.com/r/29ZC1O72VaK184I10',
+      M: 'https://checkout.lojastylewind.com/r/91E2g0704l8s1Q71l',
+      G: 'https://checkout.lojastylewind.com/r/r1909vJ011J3H87S',
+      GG: 'https://checkout.lojastylewind.com/r/0dK8UjKu719i14H3'
+    }
   }
 ];
 
@@ -116,13 +131,18 @@ export const ProductCards = () => {
                   </div>
                 </div>
 
-                <button 
-                  onClick={() => window.open(product.checkoutUrl, '_blank')}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-400 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                  <span>COMPRAR AGORA</span>
-                </button>
+                <div className="grid grid-cols-2 gap-2 mt-4">
+                  {Object.entries(product.variants).map(([size, url]) => (
+                    <button
+                      key={size}
+                      onClick={() => window.open(url, '_blank')}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-2 rounded-lg hover:from-cyan-400 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-md flex items-center justify-center space-x-2"
+                    >
+                      <ShoppingCart className="w-4 h-4" />
+                      <span>Comprar {size}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
